@@ -1,0 +1,56 @@
+/* Empty. Add your own CSS if you like */
+.bar.bar-stable,.bar.bar-stable .title {
+	background-color: #FF6600;
+	color: #fff;
+}
+.tabs-icon-top > .tabs .tab-item{
+	font-size: 17px;
+	color: #000;
+	line-height: 48px;
+}
+.item{
+	padding: 0px;
+	min-height: 40px;
+}
+ion-tabs.tabs-color-active-positive .tab-item.tab-item-active{
+	color: #FF6600;
+	line-height: 48px;
+	vertical-align: text-bottom;
+}
+table{width: 100%;table-layout: fixed;}
+.classname,.foodpic,.checktd,.totalbox {text-align:center;vertical-align: middle;}
+.classname{width:15%;min-width:10%;font-size: 16px;}
+.classname>span{width:1.5em;float:right;}
+.foodpic{width:50%;font-size: 14px;border-right:1px solid #ddd;padding: 5px}
+.foodpic > img{width:80%;}
+.check{font-size: 12px;color: #FF6600;display: block;padding: 5% 0;}
+.check > img{width: 13%;margin-bottom: -4px}
+.check > label{color: #000;}
+.totalbox{background-color: #eee;line-height: 40px;}
+.totalbox > span{float: right;padding-right: 20px;}
+.nextbox{line-height: 40px;}
+.nextlink{float: right;margin-right: 20px;}
+.lastlink{float: left;margin-left: 20px;}
+.nextbox a{color: #000;text-decoration:none;}
+.nextbox img{width: 16px;}
+
+.bar-stable .button.button-clear{display: none;}
+
+.addr > input{width: 100%;border-bottom:thin dotted #ccc;height: 42px;line-height: 42px;padding-left: 20px;}
+.item-divider{text-align: center;line-height: 40px;};
+.time{display:block;}
+.time > input{width: 42px;height: 42px;line-height: 42px;font-size: larger;float:left;}
+.time > span{width: 42px;height: 42px;line-height: 42px;font-size: larger;float:right;}
+.orderpage{text-align: center;}
+.orderpage red {color: red;display: block;}
+.orderpage span {display: block;}
+
+.mypage td{vertical-align: middle;}
+.mypage img{vertical-align: bottom;}
+.paddingright img{border-radius: 6px;}
+.paddingright{padding-right: 10px;}
+
+name{line-height: initial;}
+mobile{float: right;}
+address{font-size:14px;margin-top:6px;}
+.address1{line-height:40px;font-size:18px;}

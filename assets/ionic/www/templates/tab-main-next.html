@@ -1,0 +1,47 @@
+<ion-view view-title="膳食">
+  <ion-content delegate-handle="mainScrollNext">
+    <ion-list>
+      <ion-item ng-repeat="menu in foodmenus" type="item-text-wrap">
+      <table>
+        <tr>
+          <td class="classname">{{ menu.menuclass }}</td>
+          <td>
+            <ion-item ng-repeat="food in menu.menudata" type="item-text-wrap">
+            <table>
+              <tr>
+                <td class="foodpic"><img src="img/foods/{{food.img}}.png" /><br />{{ food.name }}</td>
+                <td class="checktd">
+                  <div ng-repeat="child in food.children" class="check">{{child._name ? child._name+'：' : '' }}¥{{child.price}}元/份 <img src="img/jian.png" ng-click="child.copy = child.copy > 1 ? child.copy-1 : 0"> <label>{{child.copy}}</label> <img src="img/jia.png" ng-click="child.copy = child.copy +1"/></div>
+                </td>
+              </tr>
+            </table>
+            </ion-item>
+          </td>
+        </tr>
+      </table>
+      </ion-item>
+      <ion-item class="totalbox">
+          总计<span>¥{{ foodmenus | totalOfMenus }}</span>
+      </ion-item>
+        <ion-item class="addr">
+            <input type="text" id="name" placeholder="姓名" value="{{ name }}">
+            <input type="text" id="mobile" placeholder="手机" value="{{ mobile }}">
+        </ion-item>
+      
+      <div class="list">
+        <div class="item item-divider"> 配送时间</div>
+        <ion-radio ng-repeat="item in timeItems" ng-value="item" ng-model="selected.time" name="time">{{ item}}</ion-radio>
+        <input type="hidden" id="time" value="{{ selected.time }}">
+      </div>
+      <div class="list">
+        <div class="item item-divider"> 待收货地址</div>
+        <ion-radio ng-repeat="item in addrItems" ng-value="item" ng-model="selected.addr" name="address">{{ item}}</ion-radio>
+        <input type="hidden" id="address" value="{{ selected.addr }}">
+      </div>
+      <ion-item class="nextbox">
+        <a href="#/tab/main" class="lastlink">上一步 <img src="img/last.png"> </a>
+        <a class="nextlink" ng-click="gophp()">下一步 <img src="img/next.png"> </a>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

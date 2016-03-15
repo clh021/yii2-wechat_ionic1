@@ -1,0 +1,23 @@
+<ion-view view-title="订单">
+    <ion-content delegate-handle="mainScrollOrder">
+      <div class="orderpage padding">
+        <h3>请将二维码对准取餐机器</h3>
+        <div class="ewm">
+        <img src="{{msg.qrimg}}" alt="取餐二维码">
+        </div>
+        <red ng-repeat="r in msg.red">{{r}}</red>
+        <span ng-repeat="s in msg.status">{{s}}</span>
+        <h3>{{msg.time}}时取餐</h3>
+        <div class="dt">
+            <img src="{{msg.addrimg}}" alt="地图">
+        </div>
+        <br /><br />
+        <div class="qhr">
+            <b>{{msg.name}}</b>
+            <span>{{msg.mobile}}</span>
+            <p>{{msg.address}}</p>
+        </div>
+        <br /><br />
+    </div>
+    </ion-content>
+</ion-view> 

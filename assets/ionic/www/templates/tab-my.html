@@ -1,0 +1,28 @@
+<ion-view view-title="我的">
+  <ion-content>
+      <div class="mypage padding">
+      <table border="0">
+          <tr>
+              <td rowspan="3" class="paddingright"><img src="{{r.avatar}}" width="100%"></td>
+              <td>姓名：{{r.name}}</td>
+              <td></td>
+          </tr>
+          <tr>
+              <td>余额：0</td>
+              <td>积分：0</td>
+          </tr>
+          <tr>
+              <td>实名认证：<img src="img/rz_icon1.png"></td>
+              <td>VIP：<img src="img/rz_icon2.png"></td>
+          </tr>
+      </table>
+      </div>
+      <ion-item class="totalbox">
+        取餐地址
+      </ion-item>
+      <div class="padding address1">
+      <name>{{r.name2}}</name> <mobile>{{r.mobile}}</mobile>
+      <address>{{r.address}}</address>
+      </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,31 @@
+<ion-view view-title="膳食">
+  <ion-content delegate-handle="mainScroll">
+    <ion-list>
+      <ion-item ng-repeat="menu in foodmenus" type="item-text-wrap">
+      <table>
+        <tr>
+          <td class="classname">{{ menu.menuclass }}</td>
+          <td>
+            <ion-item ng-repeat="food in menu.menudata" type="item-text-wrap">
+            <table>
+              <tr>
+                <td class="foodpic"><img src="img/foods/{{food.img}}.png" /><br />{{ food.name }}</td>
+                <td class="checktd">
+                  <div ng-repeat="child in food.children" class="check">{{child._name ? child._name+'：' : '' }}¥{{child.price}}元/份 <img src="img/jian.png" ng-click="child.copy = child.copy > 1 ? child.copy-1 : 0"> <label>{{child.copy}}</label> <img src="img/jia.png" ng-click="child.copy = child.copy +1"/></div>
+                </td>
+              </tr>
+            </table>
+            </ion-item>
+          </td>
+        </tr>
+      </table>
+      </ion-item>
+      <ion-item class="totalbox">
+        总计<span>¥{{ foodmenus | totalOfMenus }}</span>
+      </ion-item>
+      <ion-item class="nextbox">
+        <a href="#/tab/main/next" class="nextlink">下一步 <img src="img/next.png"> </a>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

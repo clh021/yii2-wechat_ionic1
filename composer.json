@@ -1,0 +1,26 @@
+{
+    "name": "clh021/yii2-wechat_ionic1",
+    "description": "Yii2 wechat base on ionic1 for other application",
+    "type": "yii2-extension",
+    "keywords": ["yii2","extension","wechat"],
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "leehom Chen",
+            "email": "clh21@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.9",
+        "yiisoft/yii2": "*",
+        "overtrue/wechat": "develop-dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "clh021\\wechat_ionic1\\": ""
+        }
+    },
+    "extra": {
+        "bootstrap": "clh021\\wechat_ionic1\\Bootstrap"
+    }
+}
